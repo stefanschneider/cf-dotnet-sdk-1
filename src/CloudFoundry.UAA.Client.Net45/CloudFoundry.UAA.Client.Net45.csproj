@@ -79,6 +79,9 @@
     <Compile Include="..\CloudFoundry.UAA.Client\Authentication\Token.cs">
       <Link>Authentication\Token.cs</Link>
     </Compile>
+    <Compile Include="..\CloudFoundry.UAA.Client\Authentication\HeaderOverrideHttpClientHandler.cs">
+      <Link>Authentication\HeaderOverrideHttpClientHandler.cs</Link>
+    </Compile>
     <Compile Include="..\CloudFoundry.UAA.Client\CloudCredentials.cs">
       <Link>CloudCredentials.cs</Link>
     </Compile>

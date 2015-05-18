@@ -51,7 +51,7 @@
                 throw new ArgumentNullException("credentials");
             }
 
-            using (var httpClientHandler = new PlatformBaseHttpClientHandler())
+            using (var httpClientHandler = new HeaderOverrideHttpClientHandler())
             {
                 if (this.httpProxy != null)
                 {
@@ -59,6 +59,8 @@
                 }
 
                 httpClientHandler.SkipCertificateValidation = this.skipCertificateValidation;
+
+                httpClientHandler.OverrideAcceptHeader = "application/json";
 
                 var client = new OAuth2Client(this.oauthTarget, this.oauthClient, this.oauthSecret, httpClientHandler);
 
@@ -132,7 +134,7 @@
 
         private async Task<TokenResponse> RefreshToken(string refreshToken)
         {
-            using (var httpClientHandler = new PlatformBaseHttpClientHandler())
+            using (var httpClientHandler = new HeaderOverrideHttpClientHandler())
             {
                 if (this.httpProxy != null)
                 {
@@ -140,6 +142,8 @@
                 }
 
                 httpClientHandler.SkipCertificateValidation = this.skipCertificateValidation;
+
+                httpClientHandler.OverrideAcceptHeader = "application/json";
 
                 var client = new OAuth2Client(this.oauthTarget, this.oauthClient, this.oauthSecret, httpClientHandler);
                 var tokenResponse = await client.RequestRefreshTokenAsync(refreshToken);
