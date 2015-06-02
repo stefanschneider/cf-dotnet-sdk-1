@@ -86,7 +86,7 @@ namespace CloudFoundry.CloudController.V2.Client
                 UriBuilder uploadEndpoint = new UriBuilder(this.Client.CloudTarget.AbsoluteUri);
                 uploadEndpoint.Path = string.Format(CultureInfo.InvariantCulture, "/v2/apps/{0}/bits", appGuid.ToString());
 
-                List<FileFingerprint> fingerPrintList = fingerprints.Values.SelectMany(list => list).ToList();
+                List<FileFingerprint> fingerPrintList = fingerprints.Values.SelectMany(list => list).Where(fingerprint => !neededFiles.Contains(fingerprint.FileName)).ToList();
 
                 string serializedFingerprints = JsonConvert.SerializeObject(fingerPrintList);
                 SimpleHttpResponse uploadResult = await this.UploadZip(uploadEndpoint.Uri, zippedPayload, serializedFingerprints);
