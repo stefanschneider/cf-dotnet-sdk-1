@@ -45,10 +45,10 @@ namespace CloudFoundry.CloudController.Test.Integration
             var newSpace = client.Spaces.CreateSpace(spc).Result;
             spaceGuid = newSpace.EntityMetadata.Guid;
 
-            CreatesSharedDomainDeprecatedRequest r = new CreatesSharedDomainDeprecatedRequest();
+            var r = new CreatePrivateDomainOwnedByGivenOrganizationRequest();
             r.Name = Guid.NewGuid().ToString() + ".com";
-            r.Wildcard = true;
-            domainGuid = client.DomainsDeprecated.CreatesSharedDomainDeprecated(r).Result.EntityMetadata.Guid;
+            r.OwningOrganizationGuid = orgGuid;
+            domainGuid = client.PrivateDomains.CreatePrivateDomainOwnedByGivenOrganization(r).Result.EntityMetadata.Guid;
         }
 
         [ClassCleanup]

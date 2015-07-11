@@ -36,7 +36,7 @@ namespace CloudFoundry.CloudController.V3.Client
 
             SimpleHttpResponse uploadResult = await this.UploadZip(uploadEndpoint.Uri, zipStream);
 
-            if (uploadResult.StatusCode != System.Net.HttpStatusCode.Created)
+            if (uploadResult.StatusCode != System.Net.HttpStatusCode.OK)
             {
                 var statusCode = uploadResult.StatusCode.ToString("D");
 
