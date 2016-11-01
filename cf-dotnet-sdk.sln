@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.40629.0
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CloudFoundry.CloudController.V2.Client", "src\CloudFoundry.CloudController.V2.Client\CloudFoundry.CloudController.V2.Client.csproj", "{F54D7282-FE0C-474D-A8F6-326146554CDB}"
 EndProject
@@ -47,6 +47,15 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CloudFoundry.CloudController.V3.Client", "src\CloudFoundry.CloudController.V3.Client\CloudFoundry.CloudController.V3.Client.csproj", "{D1931738-1F49-48E0-8CAC-5CAAD8CC2244}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CloudFoundry.CloudController.V3.Client.Test", "src\CloudFoundry.CloudController.V3.Client.Test\CloudFoundry.CloudController.V3.Client.Test.csproj", "{FC18073C-1282-4A26-8447-45046D3AB8E7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CloudFoundry.Doppler.Client", "CloudFoundry.Doppler.Client\CloudFoundry.Doppler.Client.csproj", "{2F31C9AF-B2AF-4EF5-BAF4-20C6635A7420}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CloudFoundry.Doppler.Client.Net45", "CloudFoundry.Doppler.Client.Net45\CloudFoundry.Doppler.Client.Net45.csproj", "{91452618-152F-4C48-9027-AFB002CB1C38}"
+	ProjectSection(ProjectDependencies) = postProject
+		{D78DC433-8953-4339-BE83-529484EA7D8B} = {D78DC433-8953-4339-BE83-529484EA7D8B}
+		{126AEDA2-FA3B-42EB-B728-770A975DEF2B} = {126AEDA2-FA3B-42EB-B728-770A975DEF2B}
+		{446818CB-1AA8-449A-B58A-01DA64A36871} = {446818CB-1AA8-449A-B58A-01DA64A36871}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -114,6 +123,14 @@ Global
 		{FC18073C-1282-4A26-8447-45046D3AB8E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FC18073C-1282-4A26-8447-45046D3AB8E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FC18073C-1282-4A26-8447-45046D3AB8E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F31C9AF-B2AF-4EF5-BAF4-20C6635A7420}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F31C9AF-B2AF-4EF5-BAF4-20C6635A7420}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F31C9AF-B2AF-4EF5-BAF4-20C6635A7420}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F31C9AF-B2AF-4EF5-BAF4-20C6635A7420}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91452618-152F-4C48-9027-AFB002CB1C38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91452618-152F-4C48-9027-AFB002CB1C38}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91452618-152F-4C48-9027-AFB002CB1C38}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91452618-152F-4C48-9027-AFB002CB1C38}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

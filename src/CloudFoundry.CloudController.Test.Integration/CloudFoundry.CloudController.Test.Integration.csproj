@@ -9,12 +9,13 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>CloudFoundry.CloudController.Test.Integration</RootNamespace>
     <AssemblyName>CloudFoundry.CloudController.Test.Integration</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <NuGetPackageImportStamp>f94ee8a6</NuGetPackageImportStamp>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\</SolutionDir>
     <RestorePackages>true</RestorePackages>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -70,6 +71,7 @@
     <Compile Include="CancelTest.cs" />
     <Compile Include="CertificateValidationTest.cs" />
     <Compile Include="InfoTest.cs" />
+    <Compile Include="DopplerTest.cs" />
     <Compile Include="LoggregatorTest.cs" />
     <Compile Include="OrgTest.cs" />
     <Compile Include="PushTest.cs" />
@@ -83,6 +85,10 @@
     <Compile Include="v3\PushTest.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\CloudFoundry.Doppler.Client.Net45\CloudFoundry.Doppler.Client.Net45.csproj">
+      <Project>{91452618-152f-4c48-9027-afb002cb1c38}</Project>
+      <Name>CloudFoundry.Doppler.Client.Net45</Name>
+    </ProjectReference>
     <ProjectReference Include="..\CloudFoundry.CloudController.Common.Net45\CloudFoundry.CloudController.Common.Net45.csproj">
       <Project>{126aeda2-fa3b-42eb-b728-770a975def2b}</Project>
       <Name>CloudFoundry.CloudController.Common.Net45</Name>
